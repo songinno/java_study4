@@ -26,7 +26,7 @@ public class variable { // <- variable 바꾸면 안됨. 파일명과 클래스�
         int triple = score * 3;
         System.out.println("triple = " + triple); // soutv
         System.out.println("triple * 3 = " + triple * 3);
-//eee
+
         // #정수: int, 실수:double, 문자열: string
         String nickName = "짹짹이";
 
