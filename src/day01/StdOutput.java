@@ -32,7 +32,7 @@ public class StdOutput {
 
         System.out.printf("할인비율: %.2f%%\n", saleRate * 100); // %% 2개로 특수기호 % 넣어줄 수 있음.
 
-
+        // * ctrl + d : 복사
 
 
     }
