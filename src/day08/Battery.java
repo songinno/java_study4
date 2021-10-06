@@ -11,6 +11,6 @@ public class Battery {
     }
 
     void charge() {
-
+        System.out.println("배터리를 충전합니다.");
     }
 }
