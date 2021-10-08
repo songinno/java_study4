@@ -198,7 +198,7 @@ public class MemberMenu {
             System.out.print("# 검색할 회원의 이름: ");
             String inputName = sc.next();
             Member[] members = mc.searchName(inputName);
-            if (members.length != 0) {
+            if (inputName.equals(members[0].getName())) {
                 for (int i = 0; i < members.length; i++) {
                     System.out.println(members[i].inform());
                 }
