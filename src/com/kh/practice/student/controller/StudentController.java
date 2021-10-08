@@ -19,17 +19,24 @@ public class StudentController {
     }
 
     // #기능
-    public Student[] printStudent() {
-        return null;
+    public Student[] printStudent()
+    {
+        return sArr;
     }
 
-    public int sumScore() {
-        return 0;
+    private int sumScore() { // private 처리 해놓는게 좋음. 어짜피avgScore가 상위호환.
+        int total = 0;
+
+        for (Student s : sArr) {
+            total += s.getScore();
+        }
+        return total;
     }
 
     public double[] avgScore() {
-        return null;
+        int total = sumScore();
+        double average = (double) total/ sArr.length;
+        return new double[] {total, average};
     }
 
-
-}
+}// end class

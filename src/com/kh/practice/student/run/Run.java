@@ -2,6 +2,9 @@ package com.kh.practice.student.run;
 
 import com.kh.practice.student.controller.StudentController;
 import com.kh.practice.student.model.vo.Student;
+import com.kh.practice.student.view.StudentMenu;
+
+import java.util.Arrays;
 
 public class Run {
     public static void main(String[] args) {
@@ -17,7 +20,8 @@ public class Run {
 //        System.out.println(b.inform());
         //=> 둘이 결과론적으론 똑같음.
 
-        StudentController ss = new StudentController();
+        new StudentMenu();
 
+;
     }
 }
