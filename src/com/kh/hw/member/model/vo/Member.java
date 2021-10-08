@@ -1,7 +1,6 @@
 package com.kh.hw.member.model.vo;
 
 public class Member {
-    //#필드
     private String id;
     private String name;
     private String password;
@@ -9,10 +8,7 @@ public class Member {
     private char gender;
     private int age;
 
-
-
-    //#생성자
-    public Member(String aaa, String s) {
+    public Member() {
     }
 
     public Member(String id, String name, String password, String email, char gender, int age) {
@@ -24,7 +20,11 @@ public class Member {
         this.age = age;
     }
 
-    //setter,getter
+    public String inform() {
+        return String.format("%s | %s | %s | %s | %c | %d "
+                , id, name, password, email, gender, age);
+    }
+
     public String getId() {
         return id;
     }
@@ -72,12 +72,4 @@ public class Member {
     public void setAge(int age) {
         this.age = age;
     }
-
-    //메서드
-    public String inform() {
-
-        return String.format("%s %s %s %s %c %d"
-                , this.id, this.name, this.password, this.email, this.gender, this.age);
-    }
-
-}//end class
+}

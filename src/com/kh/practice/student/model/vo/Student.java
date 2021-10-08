@@ -1,12 +1,11 @@
 package com.kh.practice.student.model.vo;
 
 public class Student {
-    //#필드
-    private String name; // 이름
-    private String subject; // 과목
-    private int score; // 점수
 
-    //#생성자
+    private String name; //이름
+    private String subject; //과목
+    private int score; //점수
+
     public Student() {
     }
 
@@ -16,8 +15,6 @@ public class Student {
         this.score = score;
     }
 
-    //#기능
-    // * getter, setter
     public String getName() {
         return name;
     }
@@ -42,11 +39,10 @@ public class Student {
         this.score = score;
     }
 
-    //*inform
+    //학생 필드 정보를 합쳐서 반환
     public String inform() {
-//        System.out.printf("이름: %s / 과목: %s / 점수: %d\n", this.name, this.subject, this.score); -> return 타입이 String이 아님.
-        return String.format("이름: %s / 과목: %s / 점수: %d", this.name, this.subject, this.score); // =>String.format 사용.
+        //return "이름: " + this.name + " / 과목: " + this.subject + " / 점수: " + this.score;
+        return String.format("이름: %s / 과목: %s / 점수: %d"
+                            , this.name, this.subject, this.score);
     }
-
-
-}//end class
+}
