@@ -8,7 +8,7 @@ public class RectangleController {
 
 
     public String calcArea(int x, int y, int height, int width) {
-
+        return null;
     }
 
 
