@@ -79,11 +79,15 @@ public class PersonMenu {
     }
     //1-2 학생 보기 메서드
     private void printStudent() {
-        Student[] students = pc.printStudent();
-        for (Student s : students) {
-            System.out.println(s);
+        while (true) {
+            Student[] students = pc.printStudent();
+            for (Student s : students) {
+                if(s == null) break;
+                System.out.println(s);
+                return;
+            }
+            System.out.println("");
         }
-        System.out.println("");
     }
 
     //1-1 학생 추가 메서드
@@ -107,7 +111,6 @@ public class PersonMenu {
                 System.out.print("학생 전공: ");
                 String major = sc.nextLine();
                 pc.insertStudent(name, age, height, weight, grade, major);
-
                 System.out.println("그만 하시려면 N(또는 n), 이어하시려면 아무 키나 누르세요");
                 String continue_ = sc.nextLine();
                 switch (continue_) {
@@ -119,27 +122,30 @@ public class PersonMenu {
                 }
             } else {
                 System.out.println("학생을 담을 수 있는 공간이 꽉 찼기 때문에, 학생 추가를 종료하고 학생메뉴로 돌아갑니다.");
+                System.out.println("");
                 return;
             }
         }
     }//end 1-1.학생 추가 메서드
 
     public void employeeMenu() {
-        System.out.println("----------사원메뉴----------");
-        System.out.println("1. 사원 추가");
-        System.out.println("2. 사원 보기");
-        System.out.println("9. 메인으로");
-        System.out.print("메뉴 번호 >");
-        int employeeMenuNum = sc.nextInt();
-        sc.nextLine();
+        while (true) {
+            System.out.println("----------사원메뉴----------");
+            System.out.println("1. 사원 추가");
+            System.out.println("2. 사원 보기");
+            System.out.println("9. 메인으로");
+            System.out.print("메뉴 번호 >");
+            int employeeMenuNum = sc.nextInt();
+            sc.nextLine();
 
-        switch (employeeMenuNum) {
-            case 1:
-            case 2:
-            case 9:
-            default:
-                System.out.println("잘못 입력하셨습니다.");
-                break;
+            switch (employeeMenuNum) {
+                case 1:
+                case 2:
+                case 9:
+                default:
+                    System.out.println("잘못 입력하셨습니다.");
+                    break;
+            }
         }
     }
 
