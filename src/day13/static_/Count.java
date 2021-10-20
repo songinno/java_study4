@@ -12,7 +12,8 @@ public class Count {
     }
     //스테틱 메서드
     public static void m2() {
-//        System.out.println("x: " + x); // -> x는 불가능.
+//        x = 1; // 초기화 불가.
+//        System.out.println("x: " + x); // ->  불가능. (this가 없어서)
         System.out.println("y: " + y); // static 데이터 y는 참조 가능.
     }
 

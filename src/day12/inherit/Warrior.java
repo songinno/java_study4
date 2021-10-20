@@ -5,7 +5,23 @@ public class Warrior extends Player {
     public int rage; // 분노 게이지
 
     //### 메서드
-    public void fireSlash() {
+    public void fireSlash(Player target) {  // + 다형성 연습
+        System.out.printf("%s님이 %s님에게 fireflash를 시전하였습니다.\n", this.name, target.name);
+        int skillDamage = 10;
+        if (target instanceof Mage) {
+            target.hp -= skillDamage + 10;
+            System.out.printf("%s님이 %d의 피해를 입었습니다.\n", target.name, skillDamage + 10);
+        } else if (target instanceof Hunter) {
+            target.hp -= skillDamage + 5;
+            System.out.printf("%s님이 %d의 피해를 입었습니다.\n", target.name, skillDamage + 5);
+        } else if (target instanceof Warrior) {
+            target.hp -= skillDamage;
+            System.out.printf("%s님이 %d의 피해를 입었습니다.\n", target.name, skillDamage);
+        } else {
+            System.out.println("대상이 잘못되었습니다.");
+        }
+
+        System.out.printf("%s님의 현재 체력: %d\n", target.name, target.hp);
 
     }
 

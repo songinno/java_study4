@@ -16,7 +16,7 @@ public class Main {
 
         w.info();
         w.attack();
-        w.fireSlash(); // 이건 원래 얘꺼
+//        w.fireSlash(); // 이건 원래 얘꺼
 
         // 실제로 물려주는게 아니라, Warrior객체가 있고, Player객체 둘이 링크를 걸어서, 두개의 객체를 하나처럼 사용. 메모리 2개씀.
         // Warrior에는 여전히 rage밖에 없음.

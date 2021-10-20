@@ -6,4 +6,9 @@ public class Tucson extends Car{
     public void run() {
         System.out.println("투싼이 달립니다.");
     }
+
+    @Override
+    public void downSpeed() {
+        System.out.println("속도를 줄입니다.");
+    }
 }
